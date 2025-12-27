@@ -2,14 +2,11 @@
 
 export default function Skills() {
   return (
-    <div className="blocco" id="skills">
+    <div className="blocco section-bordered" id="skills">
       <div className="section-header">
         <h2>
           COMPETENZE <span className="gold">TECNICHE</span>
         </h2>
-        <p className="section-subtitle">
-          Padronanza completa delle tecniche di car detailing professionale
-        </p>
       </div>
       <div className="skills-grid">
         <div className="skill-item">
@@ -22,7 +19,7 @@ export default function Skills() {
         </div>
         <div className="skill-item">
           <div className="skill-icon">
-            <i class="fas fa-shield-alt"></i>
+            <i className="fas fa-shield-alt"></i>
           </div>
           <div className="skill-text">Lucidatura professionale multi-step</div>
         </div>
@@ -34,13 +31,13 @@ export default function Skills() {
         </div>
         <div className="skill-item">
           <div className="skill-icon">
-            <i class="fas fa-eraser"></i>
+            <i className="fas fa-eraser"></i>
           </div>
           <div className="skill-text">Rimozione ossido e graffi</div>
         </div>
         <div className="skill-item">
           <div className="skill-icon">
-            <i class="fas fa-cogs"></i>
+            <i className="fas fa-cogs"></i>
           </div>
           <div className="skill-text">Ripristino plastiche e carrozzeria</div>
         </div>

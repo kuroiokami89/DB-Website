@@ -1,4 +1,5 @@
 import "./globals.css";
+import "./mediaquery.css";
 import "./colors.css";
 import Head from "./components/HeadComponent";
 import Header from "./components/Header";

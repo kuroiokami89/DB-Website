@@ -1,29 +1,56 @@
-/* replace your old color variables with the single accent approach
-   (drop this into your main CSS after :root) */
+/* ============================================
+   SINGLE ACCENT SYSTEM - CROSS-BROWSER SAFE
+   ============================================ */
+
 :root {
-  --accent: #00bfa6; /* acqua green (brand accent) */
+  --accent: #00bfa6; /* Main accent */
+  --accent-dim: rgba(0, 191, 166, 0.3); /* 30% opacity */
+  --accent-glow: rgba(0, 191, 166, 0.08); /* 8% for hover */
+  --accent-subtle: rgba(0, 191, 166, 0.06); /* 6% for backgrounds */
+
   --black: #080808;
   --white: #faf9f6;
   --border: rgba(255, 255, 255, 0.12);
+  --text-muted: rgba(255, 255, 255, 0.6);
 }
 
-/* Selection colors (keeps text readable) */
-::selection {
-  background-color: var(--white);
-  color: var(--black);
-}
+/* ============================================
+   SELECTION
+   ============================================ */
+::selection,
 ::-moz-selection {
   background-color: var(--white);
   color: var(--black);
 }
 
-/* Body */
+/* ============================================
+   BODY BASE
+   ============================================ */
 body {
   color: var(--white);
   background: var(--black);
 }
 
-/* Headline accent (previously .gold) */
+/* ============================================
+   SECTION BORDER - REUSABLE CLASS
+   ============================================ */
+.section-bordered {
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 4rem;
+  margin-bottom: 4rem;
+}
+
+/* Remove border bottom padding/margin on mobile for tighter spacing */
+@media (max-width: 768px) {
+  .section-bordered {
+    padding-bottom: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+
+/* ============================================
+   TEXT ACCENTS
+   ============================================ */
 .hero-text h1 .gold,
 .section-header h2 .gold,
 .profile-role,
@@ -31,18 +58,25 @@ body {
 .skill-icon,
 .stat h3,
 .service i,
-.specialization-card i {
-  color: var(--accent);
+.specialization-card i,
+.badge-icon,
+.contact-icon,
+.experience-icon i,
+.skill-icon i {
+  color: var(--accent) !important;
 }
 
-/* Buttons: primary accent button and inverse hover */
+/* ============================================
+   BUTTONS
+   ============================================ */
 .btn-accent,
 .btn-red {
-  /* keep class name for compatibility */
-  border-color: var(--accent);
+  border: 1px solid var(--accent);
   color: var(--accent);
   background: transparent;
+  transition: all 0.3s ease;
 }
+
 .btn-accent:hover,
 .btn-red:hover {
   background: var(--accent);
@@ -50,17 +84,20 @@ body {
   border-color: var(--accent);
 }
 
-/* Generic border / panels */
+/* ============================================
+   BORDERS & PANELS
+   ============================================ */
 .border-weak,
 .work-showcase,
 .skills-grid,
-.contact-grid,
-#header {
-  border: 1px solid rgba(0, 191, 166, 0.3); /* usa l'accent con opacità */
+.contact-grid {
+  border: 1px solid var(--accent-dim);
   background: rgba(255, 255, 255, 0.02);
 }
 
-/* Availability / badge: subtle gradient from accent to a darker shade */
+/* ============================================
+   AVAILABILITY BADGE
+   ============================================ */
 .availability-badge {
   background: linear-gradient(
     135deg,
@@ -71,50 +108,69 @@ body {
   color: var(--white);
 }
 
-/* Hover highlights for cards: use low-opacity accent */
+/* ============================================
+   HOVER EFFECTS
+   ============================================ */
 .work-item:hover,
 .skill-item:hover,
 .contact-item:hover {
-  background: color-mix(in srgb, var(--accent) 6%, transparent);
+  background: var(--accent-subtle);
+  border-color: var(--accent-dim);
+  transition: all 0.3s ease;
 }
 
-/* Icon accent used for small icons (contact, stat, etc.) */
-.badge-icon,
-.contact-icon,
-.experience-icon i,
-.skill-icon i {
-  color: var(--accent);
-}
-
-/* Footer and subtle text */
+/* ============================================
+   MUTED TEXT
+   ============================================ */
 #footer p,
 .contact-label,
 .stat p,
 .hero-subtitle,
 .section-subtitle {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--text-muted);
 }
 
-/* Hero subtle radial (use accent with very low opacity) */
+/* ============================================
+   HERO GLOW
+   ============================================ */
 .hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: radial-gradient(
     circle at 30% 40%,
-    color-mix(in srgb, var(--accent) 8%, transparent) 0%,
+    var(--accent-glow) 0%,
     transparent 50%
   );
+  pointer-events: none;
 }
 
-/* Scroll-top hover invert (keeps consistent contrast) */
+/* ============================================
+   SCROLL TO TOP
+   ============================================ */
+.scroll-top {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid var(--accent);
+  transition: all 0.3s ease;
+}
+
 .scroll-top:hover {
   background: var(--white);
   color: var(--black);
   border-color: var(--black);
 }
 
-/* small responsive tweak: ensure accent items remain visible on dark backgrounds */
+/* ============================================
+   MOBILE ADJUSTMENTS
+   ============================================ */
 @media (max-width: 768px) {
   .service i,
   .skill-icon i {
     font-size: 1.05rem;
+    color: var(--accent);
   }
 }

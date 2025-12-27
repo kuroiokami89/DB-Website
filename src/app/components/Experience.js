@@ -2,14 +2,11 @@
 
 export default function Experience() {
   return (
-    <div className="blocco" id="experience">
+    <div className="blocco section-bordered" id="experience">
       <div className="section-header">
         <h2>
           ESPERIENZA <span className="gold">PROFESSIONALE</span>
         </h2>
-        <p className="section-subtitle">
-          Anni di dedizione e perfezionamento nell'arte del car detailing
-        </p>
       </div>
 
       <div className="experience-grid">

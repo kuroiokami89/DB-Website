@@ -61,8 +61,8 @@ export default function Header() {
 
   return (
     <header id="header">
-      <div className="header-container">
-        <div className="logo">RAUNIG DOBRIKA</div>
+      {/* <div className="header-container">
+        <div className="logo">DB</div>
         <nav className="header-anchors">
           <a href="#home">HOME</a>
           <a href="#about">PROFILO</a>
@@ -93,7 +93,8 @@ export default function Header() {
         <a href="#contact" onClick={toggleMenu}>
           CONTATTI
         </a>
-      </div>
+      </div> */}
+      <img src="/Logo.png" alt="Logo Dobrika Raunig" className="header-logo" />
     </header>
   );
 }

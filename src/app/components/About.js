@@ -2,14 +2,11 @@
 
 export default function About() {
   return (
-    <div className="blocco" id="about">
+    <div className="blocco section-bordered" id="about">
       <div className="section-header">
         <h2>
           PROFILO <span className="gold">PROFESSIONALE</span>
         </h2>
-        <p className="section-subtitle">
-          Eccellenza nella cura e preparazione estetica dei veicoli
-        </p>
       </div>
       <div className="about-content">
         <p className="about-text">

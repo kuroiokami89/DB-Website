@@ -8,7 +8,7 @@ export default function Hero() {
   };
 
   return (
-    <div className="hero" id="home">
+    <div className="hero section-bordered" id="home">
       <div className="hero-content">
         <div className="hero-text">
           <div className="hero-greeting">Ciao, sono</div>
@@ -22,18 +22,12 @@ export default function Hero() {
             ripristino carrozzeria e trattamenti estetici professionali. Cerco
             opportunità in officine e concessionarie.
           </p>
-          <div className="hero-buttons">
-            <a href="#contact" className="btn btn-red">
-              <i className="fas fa-envelope"></i> CONTATTAMI
-            </a>
-            <a href="#" className="btn" onClick={handleDownloadClick}>
-              <i className="fas fa-download"></i> SCARICA CV
-            </a>
-          </div>
           <div className="hero-stats">
             <div className="stat">
               <h3>5+</h3>
-              <p>ANNI ESPERIENZA</p>
+              <p>
+                ANNI <br /> ESPERIENZA
+              </p>
             </div>
             <div className="stat">
               <h3>26</h3>
@@ -45,6 +39,14 @@ export default function Hero() {
               </h3>
               <p>LATINA, LT</p>
             </div>
+          </div>
+          <div className="hero-buttons">
+            <a href="#contact" className="btn btn-red">
+              <i className="fas fa-envelope"></i> CONTATTAMI
+            </a>
+            <a href="#" className="btn" onClick={handleDownloadClick}>
+              <i className="fas fa-download"></i> SCARICA CV
+            </a>
           </div>
         </div>
       </div>

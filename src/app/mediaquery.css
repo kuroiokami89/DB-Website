@@ -1,0 +1,144 @@
+/* ============================================
+   RESPONSIVE - TABLET (1024px and below)
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .hero-text h1 {
+    font-size: 4.5rem;
+  }
+
+  .showcase-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .section-header h2 {
+    font-size: 3rem;
+  }
+
+  .experience-item {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header-anchors {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+}
+
+/* ============================================
+   RESPONSIVE - MOBILE (768px and below)
+   ============================================ */
+
+@media (max-width: 768px) {
+  .header-logo {
+    height: 150px;
+  }
+
+  .hero {
+    padding: 70px 20px 80px;
+  }
+
+  .btn {
+    padding: 10px;
+  }
+
+  #header {
+    top: -20px;
+  }
+
+  .hero-text h1 {
+    font-size: 5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .hero-stats,
+  .hero-buttons {
+    justify-content: space-between;
+  }
+
+  .hero-stats {
+    padding: 0;
+  }
+
+  .showcase-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blocco {
+    margin: 0 20px;
+    margin-bottom: 100px;
+  }
+
+  .section-header {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0;
+    gap: 15px;
+  }
+
+  .section-header h2 {
+    font-size: 2.8rem;
+  }
+
+  .about-text {
+    font-size: 1.2rem;
+  }
+
+  .experience-content h3 {
+    font-size: 2rem;
+  }
+
+  #footer {
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    margin: 0;
+  }
+
+  .experience-icon {
+    text-align: center;
+  }
+
+  .experience-item {
+    gap: 35px 0;
+  }
+
+  .experience-grid {
+    gap: 0px;
+  }
+
+  .about-content {
+    padding: 0;
+  }
+
+  .skills-grid {
+    margin-top: 0px;
+  }
+
+  .scroll-top {
+    bottom: 70px;
+    right: 44%;
+    width: 50px;
+    height: 50px;
+  }
+}
