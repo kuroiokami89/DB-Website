@@ -1,0 +1,120 @@
+/* replace your old color variables with the single accent approach
+   (drop this into your main CSS after :root) */
+:root {
+  --accent: #00bfa6; /* acqua green (brand accent) */
+  --black: #080808;
+  --white: #faf9f6;
+  --border: rgba(255, 255, 255, 0.12);
+}
+
+/* Selection colors (keeps text readable) */
+::selection {
+  background-color: var(--white);
+  color: var(--black);
+}
+::-moz-selection {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+/* Body */
+body {
+  color: var(--white);
+  background: var(--black);
+}
+
+/* Headline accent (previously .gold) */
+.hero-text h1 .gold,
+.section-header h2 .gold,
+.profile-role,
+.experience-icon,
+.skill-icon,
+.stat h3,
+.service i,
+.specialization-card i {
+  color: var(--accent);
+}
+
+/* Buttons: primary accent button and inverse hover */
+.btn-accent,
+.btn-red {
+  /* keep class name for compatibility */
+  border-color: var(--accent);
+  color: var(--accent);
+  background: transparent;
+}
+.btn-accent:hover,
+.btn-red:hover {
+  background: var(--accent);
+  color: var(--black);
+  border-color: var(--accent);
+}
+
+/* Generic border / panels */
+.border-weak,
+.work-showcase,
+.skills-grid,
+.contact-grid,
+#header {
+  border: 1px solid rgba(0, 191, 166, 0.3); /* usa l'accent con opacità */
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* Availability / badge: subtle gradient from accent to a darker shade */
+.availability-badge {
+  background: linear-gradient(
+    135deg,
+    var(--accent) 0%,
+    rgba(0, 0, 0, 0.35) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--white);
+}
+
+/* Hover highlights for cards: use low-opacity accent */
+.work-item:hover,
+.skill-item:hover,
+.contact-item:hover {
+  background: color-mix(in srgb, var(--accent) 6%, transparent);
+}
+
+/* Icon accent used for small icons (contact, stat, etc.) */
+.badge-icon,
+.contact-icon,
+.experience-icon i,
+.skill-icon i {
+  color: var(--accent);
+}
+
+/* Footer and subtle text */
+#footer p,
+.contact-label,
+.stat p,
+.hero-subtitle,
+.section-subtitle {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Hero subtle radial (use accent with very low opacity) */
+.hero::before {
+  background: radial-gradient(
+    circle at 30% 40%,
+    color-mix(in srgb, var(--accent) 8%, transparent) 0%,
+    transparent 50%
+  );
+}
+
+/* Scroll-top hover invert (keeps consistent contrast) */
+.scroll-top:hover {
+  background: var(--white);
+  color: var(--black);
+  border-color: var(--black);
+}
+
+/* small responsive tweak: ensure accent items remain visible on dark backgrounds */
+@media (max-width: 768px) {
+  .service i,
+  .skill-icon i {
+    font-size: 1.05rem;
+  }
+}

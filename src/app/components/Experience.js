@@ -1,0 +1,55 @@
+"use client";
+
+export default function Experience() {
+  return (
+    <div className="blocco" id="experience">
+      <div className="section-header">
+        <h2>
+          ESPERIENZA <span className="gold">PROFESSIONALE</span>
+        </h2>
+        <p className="section-subtitle">
+          Anni di dedizione e perfezionamento nell'arte del car detailing
+        </p>
+      </div>
+
+      <div className="experience-grid">
+        <div className="experience-item">
+          <div className="experience-icon">
+            <i className="fa-solid fa-car-side"></i>
+          </div>
+          <div className="experience-content">
+            <h3>PREPARATORE AUTO / DETAILER</h3>
+            <div className="experience-company">Officina specializzata</div>
+            <p className="experience-description">
+              Attività di lavaggio approfondito interno/esterno, lucidatura
+              carrozzerie, trattamento tappezzerie, ripristino plastiche, cerchi
+              e dettagli. Responsabile della finitura estetica prima della
+              consegna al cliente e del mantenimento degli standard di qualità
+              del servizio.
+            </p>
+          </div>
+        </div>
+
+        <div className="experience-item">
+          <div className="experience-icon">
+            <i className="fas fa-wrench"></i>
+          </div>
+          <div className="experience-content">
+            <h3>ADDETTO ALLA CARROZZERIA</h3>
+            <div className="experience-company">Officina carrozzeria</div>
+            <p className="experience-description">
+              Esperienza nella levigatura, lucidatura, verniciatura e
+              riparazione di graffi profondi. Capacità di gestire lavorazioni su
+              diversi tipi di vernici e materiali, garantendo un risultato
+              ottimale.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="availability-note">
+        Attualmente disponibile per nuove opportunità professionali.
+      </div>
+    </div>
+  );
+}
