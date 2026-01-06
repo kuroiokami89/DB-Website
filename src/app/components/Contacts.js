@@ -7,10 +7,10 @@ export default function Contacts() {
         <h2>
           CONTATTI <span className="gold">&</span> INFO
         </h2>
-        <p className="section-subtitle">
+        {/* <p className="section-subtitle">
           Disponibile per collaborazioni e impieghi nel settore del car
           detailing e della carrozzeria
-        </p>
+        </p> */}
       </div>
       <div className="contact-grid">
         <div className="contact-item">

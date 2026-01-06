@@ -73,8 +73,9 @@ body {
 }
 
 .cta-primary:hover {
-  color: var(--white);
+  color: var(--black);
   border-color: var(--accent);
+  background-color: var(--accent);
 }
 
 .cta-secondary {

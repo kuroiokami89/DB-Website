@@ -16,7 +16,6 @@ export default function Experience() {
           </div>
           <div className="experience-content">
             <h3>PREPARATORE AUTO / DETAILER</h3>
-            <div className="experience-company">Officina specializzata</div>
             <p className="experience-description">
               Attività di lavaggio approfondito interno/esterno, lucidatura
               carrozzerie, trattamento tappezzerie, ripristino plastiche, cerchi
@@ -33,7 +32,6 @@ export default function Experience() {
           </div>
           <div className="experience-content">
             <h3>ADDETTO ALLA CARROZZERIA</h3>
-            <div className="experience-company">Officina carrozzeria</div>
             <p className="experience-description">
               Esperienza nella levigatura, lucidatura, verniciatura e
               riparazione di graffi profondi. Capacità di gestire lavorazioni su
