@@ -19,7 +19,7 @@ export default function Contacts() {
           </div>
           <div className="contact-label">TELEFONO</div>
           <div className="contact-value">
-            <a href="tel:+39">[inserisci numero]</a>
+            <a href="tel:+39">+39 3711334614</a>
           </div>
         </div>
         <div className="contact-item">
@@ -36,7 +36,7 @@ export default function Contacts() {
             <i className="fas fa-map-marker-alt"></i>
           </div>
           <div className="contact-label">LOCALITÀ</div>
-          <div className="contact-value">[inserisci città]</div>
+          <div className="contact-value">Castelfranco Veneto, TV</div>
         </div>
       </div>
     </div>

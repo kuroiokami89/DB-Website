@@ -27,7 +27,7 @@ export default function ScrollToTop() {
 
   return (
     <div
-      className={`scroll-top ${isVisible ? "visible" : ""}`}
+      className={`scroll-top cta-secondary ${isVisible ? "visible" : ""}`}
       id="scrollTop"
       onClick={scrollToTop}
     >

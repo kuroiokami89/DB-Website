@@ -43,10 +43,6 @@ export default function Experience() {
           </div>
         </div>
       </div>
-
-      <div className="availability-note">
-        Attualmente disponibile per nuove opportunità professionali.
-      </div>
     </div>
   );
 }

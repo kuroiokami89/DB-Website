@@ -1,12 +1,12 @@
 /* ============================================
-   SINGLE ACCENT SYSTEM - CROSS-BROWSER SAFE
+   COLOR SYSTEM - BASED ON HERO
    ============================================ */
 
 :root {
-  --accent: #00bfa6; /* Main accent */
-  --accent-dim: rgba(0, 191, 166, 0.3); /* 30% opacity */
-  --accent-glow: rgba(0, 191, 166, 0.08); /* 8% for hover */
-  --accent-subtle: rgba(0, 191, 166, 0.06); /* 6% for backgrounds */
+  --accent: #00bfa6;
+  --accent-dim: rgba(0, 191, 166, 0.3);
+  --accent-glow: rgba(0, 191, 166, 0.08);
+  --accent-subtle: rgba(0, 191, 166, 0.06);
 
   --black: #080808;
   --white: #faf9f6;
@@ -32,145 +32,327 @@ body {
 }
 
 /* ============================================
-   SECTION BORDER - REUSABLE CLASS
+   HERO COLORS (DO NOT EDIT)
+   ============================================ */
+.eyebrow-badge {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.badge-dot {
+  background: var(--white);
+}
+
+.title-word {
+  color: var(--white);
+}
+
+.title-word-accent {
+  color: var(--white);
+}
+
+.title-word::before {
+  color: var(--accent);
+}
+
+.description-large {
+  color: var(--white);
+}
+
+.description-detail {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.cta-primary {
+  background: var(--white);
+  color: var(--black);
+  border: 2px solid var(--white);
+}
+
+.cta-primary::before {
+  background: var(--accent);
+}
+
+.cta-primary:hover {
+  color: var(--white);
+  border-color: var(--accent);
+}
+
+.cta-secondary {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.cta-secondary:hover {
+  border-color: var(--white);
+}
+
+.stat-number {
+  color: var(--white);
+}
+
+.stat-icon svg {
+  color: var(--white);
+}
+
+.stat-label {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.stat-divider {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.scroll-line {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), transparent);
+}
+
+.scroll-line::after {
+  background: var(--accent);
+}
+
+.scroll-text {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ============================================
+   SECTION COLORS - MATCH HERO
    ============================================ */
 .section-bordered {
-  border-bottom: 1px solid var(--accent);
-  padding-bottom: 4rem;
-  margin-bottom: 4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Remove border bottom padding/margin on mobile for tighter spacing */
-@media (max-width: 768px) {
-  .section-bordered {
-    padding-bottom: 3rem;
-    margin-bottom: 3rem;
-  }
+.section-header h2 {
+  color: var(--white);
 }
 
-/* ============================================
-   TEXT ACCENTS
-   ============================================ */
-.hero-text h1 .gold,
-.section-header h2 .gold,
-.profile-role,
-.experience-icon,
-.skill-icon,
-.stat h3,
-.service i,
-.specialization-card i,
-.badge-icon,
-.contact-icon,
-.experience-icon i,
-.skill-icon i {
-  color: var(--accent) !important;
-}
-
-/* ============================================
-   BUTTONS
-   ============================================ */
-.btn-accent,
-.btn-red {
-  border: 1px solid var(--accent);
+.section-header h2 .gold {
   color: var(--accent);
-  background: transparent;
-  transition: all 0.3s ease;
 }
 
-.btn-accent:hover,
-.btn-red:hover {
-  background: var(--accent);
+.section-subtitle {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ============================================
+   ABOUT SECTION COLORS
+   ============================================ */
+.about-tag {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.about-header h2 {
+  color: var(--white);
+}
+
+.about-subtitle {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.about-image {
+  color: var(--accent);
+}
+
+.about-image:hover {
+  border-color: var(--accent);
+}
+
+.about-stat-number {
+  color: var(--accent);
+}
+
+.about-stat-label {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.about-text {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.about-highlight {
+  color: rgba(255, 255, 255, 0.9);
+  border-left-color: var(--accent);
+}
+
+.about-highlight::before {
+  color: var(--accent);
+}
+
+.about-skill-tag {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.about-skill-tag:hover {
+  background: rgba(0, 191, 166, 0.1);
+  border-color: var(--accent);
+  color: var(--white);
+}
+
+.about-cta-button {
+  background: var(--white);
   color: var(--black);
+  border: 2px solid var(--white);
+}
+
+.about-cta-button::before {
+  background: var(--accent);
+}
+
+.about-cta-button:hover {
+  color: var(--white);
   border-color: var(--accent);
 }
 
 /* ============================================
-   BORDERS & PANELS
+   EXPERIENCE SECTION COLORS
    ============================================ */
-.border-weak,
-.work-showcase,
-.skills-grid,
+.experience-icon {
+  color: var(--accent);
+}
+
+.experience-content h3 {
+  color: var(--white);
+}
+
+.experience-company {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.experience-description {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ============================================
+   SKILLS SECTION COLORS
+   ============================================ */
+.skills-grid {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: transparent;
+}
+
+.skill-item {
+  background: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.skill-item:hover {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: var(--white);
+}
+
+.skill-icon {
+  color: var(--accent);
+}
+
+.skill-text {
+  color: var(--white);
+}
+
+/* ============================================
+   CONTACT SECTION COLORS
+   ============================================ */
 .contact-grid {
-  border: 1px solid var(--accent-dim);
-  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: transparent;
+}
+
+.contact-item {
+  background: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contact-item:hover {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: var(--white);
+}
+
+.contact-icon {
+  color: var(--accent);
+}
+
+.contact-label {
+  color: var(--text-muted);
+}
+
+.contact-value {
+  color: var(--white);
+}
+
+.contact-value a {
+  color: var(--white);
+}
+
+.contact-value a:hover {
+  color: var(--accent);
+}
+
+/* ============================================
+   FOOTER COLORS
+   ============================================ */
+#footer p {
+  color: var(--text-muted);
+}
+
+#footer a {
+  color: var(--white);
+}
+
+#footer a:hover {
+  color: var(--accent);
+}
+
+/* ============================================
+   SCROLL TO TOP COLORS
+   ============================================ */
+.scroll-top {
+  background: transparent;
+  border: 1px solid var(--white);
+  color: var(--white);
+}
+
+.scroll-top:hover {
+  background: var(--white);
+  color: var(--black);
+  border-color: var(--white);
+}
+
+/* ============================================
+   BUTTON COLORS - MATCH HERO STYLE
+   ============================================ */
+.btn-accent,
+.btn-red {
+  border: 2px solid var(--white);
+  color: var(--white);
+  background: transparent;
+}
+
+.btn-accent:hover,
+.btn-red:hover {
+  background: var(--white);
+  color: var(--black);
+  border-color: var(--white);
 }
 
 /* ============================================
    AVAILABILITY BADGE
    ============================================ */
 .availability-badge {
-  background: linear-gradient(
-    135deg,
-    var(--accent) 0%,
-    rgba(0, 0, 0, 0.35) 100%
-  );
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: var(--white);
-}
-
-/* ============================================
-   HOVER EFFECTS
-   ============================================ */
-.work-item:hover,
-.skill-item:hover,
-.contact-item:hover {
-  background: var(--accent-subtle);
-  border-color: var(--accent-dim);
-  transition: all 0.3s ease;
-}
-
-/* ============================================
-   MUTED TEXT
-   ============================================ */
-#footer p,
-.contact-label,
-.stat p,
-.hero-subtitle,
-.section-subtitle {
-  color: var(--text-muted);
-}
-
-/* ============================================
-   HERO GLOW
-   ============================================ */
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(
-    circle at 30% 40%,
-    var(--accent-glow) 0%,
-    transparent 50%
-  );
-  pointer-events: none;
-}
-
-/* ============================================
-   SCROLL TO TOP
-   ============================================ */
-.scroll-top {
   background: transparent;
-  color: var(--white);
-  border: 1px solid var(--accent);
-  transition: all 0.3s ease;
-}
-
-.scroll-top:hover {
-  background: var(--white);
-  color: var(--black);
-  border-color: var(--black);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /* ============================================
-   MOBILE ADJUSTMENTS
+   SVG RESPONSIVE SIZING
    ============================================ */
-@media (max-width: 768px) {
-  .service i,
-  .skill-icon i {
-    font-size: 1.05rem;
-    color: var(--accent);
+.responsive-svg {
+  width: 70px;
+  height: 70px;
+}
+
+@media (max-width: 640px) {
+  .responsive-svg {
+    width: 30px !important;
+    height: 30px !important;
   }
 }
